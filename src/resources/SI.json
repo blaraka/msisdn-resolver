@@ -1,0 +1,2 @@
+{ "source": "http://www.akos-rs.si/numbering-space?search=search&page=1&imetnik=-1&tip=19&dodeljene_od=&dodeljene_do=", 
+"prefixes": [["\/^20\\d{6}$\/", "COMPATEL Ltd"],["\/^40\\d{6}$\/", "SI.MOBIL d.d."],["\/^10\\d{6}$\/", "SŽ - Infrastruktura, d.o.o."], ["\/^64\\d{6}$\/", "T - 2 d.o.o."], ["\/^41\\d{6}$\/", "TELEKOM SLOVENIJE, d.d"], ["\/^70\\d{6}$\/", "TUŠMOVIL d.o.o."]]}

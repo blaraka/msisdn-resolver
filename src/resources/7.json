@@ -1,0 +1,1 @@
+{ "source": "https://raw.githubusercontent.com/googlei18n/libphonenumber/master/resources/PhoneNumberMetadata.xml", "codes": [["\/^7(7(0[012578]|47|6[02-4]|7[15-8]|85)\\d{7})$\/", "7", "KZ"], ["\/^7(9\\d{9})$\/", "7", "RU"]]}

@@ -1,0 +1,24 @@
+{
+    "name": "mateuszkrasucki/msisdn-resolver",
+    "description": "Package parsing msisdn number and identifying country,national number and if data available mobile network operator. Data about MNOs provided for Poland, Slovenia, Philipines, Colombia, Algeria, Kazakhstan and South Africa",
+    "license": "MIT",
+    "keywords": ["msisdn", "cellular", "phone"],
+    "authors": [
+        {
+            "name": "Mateusz Krasucki",
+            "email": "mateusz.krasucki@gamil.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.4.*",
+        "squizlabs/php_codesniffer": "2.*",
+        "phpmd/phpmd": "@stable",
+        "sebastian/phpcpd": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mateuszkrasucki\\msisdn-resolver\\": "src"
+        }
+    }
+}
