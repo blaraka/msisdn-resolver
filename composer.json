@@ -1,5 +1,5 @@
 {
-    "name": "mateuszkrasucki/msisdn-resolver",
+    "name": "MateuszKrasucki/Msisdn-resolver",
     "description": "Package parsing msisdn number and identifying country,national number and if data available mobile network operator. Data about MNOs provided for Poland, Slovenia, Philipines, Colombia, Algeria, Kazakhstan and South Africa",
     "license": "MIT",
     "keywords": ["msisdn", "cellular", "phone"],
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mateuszkrasucki\\msisdn-resolver\\": "src"
+            "MateuszKrasucki\\Msisdn-resolver\\": "src"
         }
     }
 }
