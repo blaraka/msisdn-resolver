@@ -1,9 +1,11 @@
 msisdn-resolver
 =============
 
-MsisdnResolver package for PHP
+MsisdnResolver package for PHP.
 
 A simple PHP package for interpreting MSISDN numbers. 
+
+To use, first install dependencies using composer. 
 
 Features
 ==
