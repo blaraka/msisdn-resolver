@@ -16,6 +16,14 @@ Bundled with verification, numbers starting with proper country code but with in
 3. Mobile network operator identification. 
 Identifcation patterns data available for Poland, Slovenia, Colombia, Algeria, South Africa, Kazakhstan and Philipines. Number portability is ignored.
 
+Usage
+==
+    $msisdn = new Msisdn('48729000000');
+    $msisdn->getCountryCode();
+    $msisdn->getCountryId();
+    $msisdn->getNationalNumber();
+    $msisdn->getMno();
+
 Adding countries
 ==
 MNO patterns data for countries are stored as JSON files in /src/resources. Name of the file is just country's ISO 3166-1 alpha-2 symbol.

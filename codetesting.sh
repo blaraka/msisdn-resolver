@@ -1,4 +1,5 @@
 #!/bin/bash
+#Code testing script
 
 echo -e "\n1. Running php -l src/*"
 php -l src/*
