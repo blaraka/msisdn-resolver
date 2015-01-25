@@ -105,7 +105,7 @@ class Msisdn
     {
         if ($this->msisdnGiven != null) {
             $msisdnString = preg_replace('/\s+/', '', $this->msisdnGiven);
-            $msisdnPattern = '/[1-9]\d{1,14}/';
+            $msisdnPattern = '/^[+]?[1-9]\d{1,14}$/';
             preg_match($msisdnPattern, $msisdnString, $matches);
             if ($matches) {
                 $this->msisdn = $matches[0];
