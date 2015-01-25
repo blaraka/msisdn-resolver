@@ -19,12 +19,17 @@ Identifcation patterns data available for Poland, Slovenia, Colombia, Algeria, S
 Usage
 ==
     $msisdn = new Msisdn('48729000000');
-    $msisdn->getCountryCode();
-    $msisdn->getCountryId();
-    $msisdn->getNationalNumber();
-    $msisdn->getMno();
-
+    $msisdn->getCountryCode(); // returns country dialing code string or null if not detrmined
+    $msisdn->getCountryCodeString(); // returns country dialing code string or 'Unknown' if not detrmined
+    $msisdn->getCountryId(); // returns ISO 3166-1 alpha-2 country symbol string or null if not determined
+    $msisdn->getCountryIdString(); // returns ISO 3166-1 alpha-2 country symbol string or 'Unknown' if not detrmined
+    $msisdn->getNationalNumber(); // returns national number string or null if not determined
+    $msisdn->getNationalNumberString(); // returns national number string or 'Unknown' if not detrmined  
+    $msisdn->getMno(); // returns mobile network operator string or null if not determined
+    $msisdn->getMnoString(); // returns mobile network operator string or 'Unknown' if not detrmined    
+    $msisdn->getFullString(); // returns full identifcation string in format "MNO, Country Code, National Number, Country ID"
+    
 Adding countries
 ==
 MNO patterns data for countries are stored as JSON files in /src/resources. Name of the file is just country's ISO 3166-1 alpha-2 symbol.
-To add MNO patterns for new countries you just have to create JSON file with the same structure and put it into 'resources' directory.   
+To add MNO patterns for new countries you just have to create JSON file with the same structure and put it into 'resources' directory.    
