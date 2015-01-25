@@ -1,6 +1,8 @@
 <?php
 
 namespace MateuszKrasucki\MsisdnResolver;
+
+openlog("MsisdnResolverLog", LOG_PID | LOG_PERROR, LOG_LOCAL0);
     
 class Msisdn
 {
@@ -51,7 +53,7 @@ class Msisdn
     
     public function getMsisdn()
     {
-        return $this->mssisdn;
+        return $this->msisdn;
     }
     
     public function getMsisdnString()
@@ -109,12 +111,12 @@ class Msisdn
                 $this->msisdn = $matches[0];
                 return true;
             } else {
-                trigger_error("Provided string " . $this->msisdnGiven
-                                . " is not valid.", E_USER_WARNING);
+                syslog(LOG_WARNING, "Provided string " . $this->msisdnGiven
+                                    . " is not valid.");
                 return false;
             }
         } else {
-            trigger_error("There is no MSISDN string set.", E_USER_WARNING);
+            syslog(LOG_WARNING, "There is no MSISDN string set.");
             return false;
         }
     }
@@ -137,16 +139,16 @@ class Msisdn
                         return true;
                     }
                 }
-                trigger_error("MSISDN " . $this->msisdn
-                                . " can't be matched with any country pattern.", E_USER_WARNING);
+                syslog(LOG_WARNING, "MSISDN " . $this->msisdn
+                                    . " can't be matched with any country pattern.");
                 return false;
             } else {
-                trigger_error("MSISDN " . $this->msisdn
-                                . " can't be matched with any country pattern.", E_USER_WARNING);
+                syslog(LOG_WARNING, "MSISDN " . $this->msisdn
+                                . " can't be matched with any country pattern.");
                 return false;
             }
         } else {
-            trigger_error("There is no MSISDN set.", E_USER_WARNING);
+            syslog(LOG_WARNING, "There is no MSISDN set.");
             return false;
         }
     }
@@ -165,24 +167,24 @@ class Msisdn
                         return true;
                     }
                 }
-                trigger_error("Match for MSISDN "
+                syslog(LOG_WARNING, "Match for MSISDN "
                                 . $this->msisdn
                                 . " not found in "
                                 . $this->countryId
                                 . " "
                                 . $this->countryCode
-                                . " mno data.", E_USER_WARNING);
+                                . " mno data.");
                 return false;
             } else {
-                trigger_error("MNO data for "
+                syslog(LOG_WARNING, "MNO data for "
                                 . $this->countryId
                                 . " "
                                 . $this->countryCode
-                                . " are not present.", E_USER_WARNING);
+                                . " are not present.");
                 return false;
             }
         } else {
-            trigger_error("Country code is not determined.", E_USER_WARNING);
+            syslog(LOG_WARNING, "Country code is not determined.");
             return false;
         }
     }
