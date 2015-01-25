@@ -1,6 +1,6 @@
 <?php
 
-namespace MateuszKrasucki\Msisdnresolver;
+namespace MateuszKrasucki\MsisdnResolver;
     
 class Msisdn
 {
