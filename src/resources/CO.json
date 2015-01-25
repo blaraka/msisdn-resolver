@@ -1,2 +1,2 @@
 { "source": "http://en.wikipedia.org/wiki/Telephone_numbers_in_Colombia#Mobile_service", 
-"prefixes": [["\/^(300|301|302)\d{7}$\/", "Tigo"],  ["\/^(303)\d{7}$\/", "Uff Movil"], ["\/^(304)\d{7}$\/", "Une"], ["\/^(305)\d{7}$\/", "Movil Exito"], ["\/^(31[0-4]|31[0,1])\d{7}$\/", "Claro Colombia"], ["\/^(31[5-8])\d{7}$\/", "Movistar"], ["\/^(319)\d{7}$\/", "Virgin Mobile"], ["\/^(35[0,1])\d{7}$\/", "Avantel"]]}
+"prefixes": [["\/^(300|301|302)\\d{7}$\/", "Tigo"],  ["\/^(303)\\d{7}$\/", "Uff Movil"], ["\/^(304)\\d{7}$\/", "Une"], ["\/^(305)\\d{7}$\/", "Movil Exito"], ["\/^(31[0-4]|31[0,1])\\d{7}$\/", "Claro Colombia"], ["\/^(31[5-8])\\d{7}$\/", "Movistar"], ["\/^(319)\\d{7}$\/", "Virgin Mobile"], ["\/^(35[0,1])\\d{7}$\/", "Avantel"] ]}

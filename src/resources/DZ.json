@@ -1,2 +1,2 @@
 { "source": "http://en.wikipedia.org/wiki/List_of_mobile_phone_number_series_by_country", 
-"prefixes": [["\/^(5)\d{8}$\/", "Nedjma Telecom"], ["\/^(6)\d{8}$\/", "Mobilis-Algerie Telecom"], ["\/^(7)\d{8}$\/", "Orascom Telecom Algerie"]]}
+"prefixes": [["\/^(5)\\d{8}$\/", "Nedjma Telecom"], ["\/^(6)\\d{8}$\/", "Mobilis-Algerie Telecom"], ["\/^(7)\\d{8}$\/", "Orascom Telecom Algerie"]]}

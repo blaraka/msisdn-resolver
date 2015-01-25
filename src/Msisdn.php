@@ -1,8 +1,6 @@
 <?php
 
 namespace MateuszKrasucki\MsisdnResolver;
-
-openlog("MsisdnResolverLog", LOG_PID | LOG_PERROR, LOG_LOCAL0);
     
 class Msisdn
 {
@@ -15,6 +13,7 @@ class Msisdn
     
     public function __construct($msisdnGiven = null)
     {
+        openlog("MsisdnResolverLog", LOG_PID | LOG_PERROR, LOG_LOCAL0);
         if ($msisdnGiven != null) {
             $this->set($msisdnGiven);
         }
@@ -105,14 +104,17 @@ class Msisdn
     {
         if ($this->msisdnGiven != null) {
             $msisdnString = preg_replace('/\s+/', '', $this->msisdnGiven);
-            $msisdnPattern = '/^[+]?[1-9]\d{1,14}$/';
+            $msisdnPattern = '/^[+]?[^0][1-9]\d{1,14}$/';
             preg_match($msisdnPattern, $msisdnString, $matches);
             if ($matches) {
-                $this->msisdn = $matches[0];
+                $this->msisdn = preg_replace('/\+/', '', $matches[0]);
                 return true;
             } else {
-                syslog(LOG_WARNING, "Provided string " . $this->msisdnGiven
-                                    . " is not valid.");
+                syslog(
+                    LOG_WARNING,
+                    "Provided string " . $this->msisdnGiven
+                    . " is not valid."
+                );
                 return false;
             }
         } else {
@@ -139,12 +141,18 @@ class Msisdn
                         return true;
                     }
                 }
-                syslog(LOG_WARNING, "MSISDN " . $this->msisdn
-                                    . " can't be matched with any country pattern.");
+                syslog(
+                    LOG_WARNING,
+                    "MSISDN " . $this->msisdn
+                    . " can't be matched with any country pattern."
+                );
                 return false;
             } else {
-                syslog(LOG_WARNING, "MSISDN " . $this->msisdn
-                                . " can't be matched with any country pattern.");
+                syslog(
+                    LOG_WARNING,
+                    "MSISDN " . $this->msisdn
+                    . " can't be matched with any country pattern."
+                );
                 return false;
             }
         } else {
@@ -167,20 +175,19 @@ class Msisdn
                         return true;
                     }
                 }
-                syslog(LOG_WARNING, "Match for MSISDN "
-                                . $this->msisdn
-                                . " not found in "
-                                . $this->countryId
-                                . " "
-                                . $this->countryCode
-                                . " mno data.");
+                syslog(
+                    LOG_WARNING,
+                    "Match for MSISDN " . $this->msisdn
+                    . " not found in ". $this->countryId
+                    . " " . $this->countryCode . " mno data."
+                );
                 return false;
             } else {
-                syslog(LOG_WARNING, "MNO data for "
-                                . $this->countryId
-                                . " "
-                                . $this->countryCode
-                                . " are not present.");
+                syslog(
+                    LOG_WARNING,
+                    "MNO data for " . $this->countryId
+                    . " " . $this->countryCode . " are not present."
+                );
                 return false;
             }
         } else {

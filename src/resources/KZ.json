@@ -1,2 +1,2 @@
 { "source": "http://www.itu.int/oth/T020200006F/en", 
-"prefixes": [["\/^(700)\d{7}$\/", "Altel"], ["\/^(701|702|775|778)\d{7}$\/", "GSM Kazakhstan (K-Cell)"], ["\/^(705|777|771)\d{7}$\/", "KaR-Tel (K-Mobile)"], ["\/^(707)\d{7}$\/", "Mobile Telecom Service"], ["\/^(760)\d{7}$\/", "Kulan"], ["\/^(762)\d{7}$\/", "Nursat"], ["\/^(763)\d{7}$\/", "Arna"], ["\/^(764)\d{7}$\/", "2Day Telecom"]]}
+"prefixes": [["\/^(700)\\d{7}$\/", "Altel"], ["\/^(701|702|775|778)\\d{7}$\/", "GSM Kazakhstan (K-Cell)"], ["\/^(705|777|771)\\d{7}$\/", "KaR-Tel (K-Mobile)"], ["\/^(707)\\d{7}$\/", "Mobile Telecom Service"], ["\/^(760)\\d{7}$\/", "Kulan"], ["\/^(762)\\d{7}$\/", "Nursat"], ["\/^(763)\\d{7}$\/", "Arna"], ["\/^(764)\\d{7}$\/", "2Day Telecom"]]}
